@@ -49,8 +49,10 @@ csv_name_timestamped = (csv_path + "bpc_hum_temp_" + hostname + "_" + timestamp 
 #asset number
 asset="BRI-MO-01"
 #URLs for Maximo REST API request
-url_humidity    = ('https://cns-mx76av.cfms.org.uk/maxrest/rest/os/mxmeterdata?_actio=AddChange&ASSETNUM='+asset+'&METERNAME=HUMIDITY&_lid=rotarua&_lpwd=Rollsroyce1&SITEID=BEDFORD&INSPECTOR='+hostname)
-url_temperature = ('https://cns-mx76av.cfms.org.uk/maxrest/rest/os/mxmeterdata?_actio=AddChange&ASSETNUM='+asset+'&METERNAME=TEMP-C&_lid=rotarua&_lpwd=Rollsroyce1&SITEID=BEDFORD&INSPECTOR='+hostname)
+maxusername = "rrint"
+maxpassword = "Rollsroyce1"
+url_humidity    = ('https://cns-mx76av.cfms.org.uk/maxrest/rest/os/mxmeterdata?_actio=AddChange&ASSETNUM='+asset+'&METERNAME=HUMIDITY&_lid='+maxusername+'&_lpwd='+maxpassword+'&SITEID=BEDFORD&INSPECTOR='+hostname)
+url_temperature = ('https://cns-mx76av.cfms.org.uk/maxrest/rest/os/mxmeterdata?_actio=AddChange&ASSETNUM='+asset+'&METERNAME=TEMP-C&_lid='+maxusername+'&_lpwd='+maxpassword+'&SITEID=BEDFORD&INSPECTOR='+hostname)
 
 
 #Create and write into CSV file - new file at each script run
